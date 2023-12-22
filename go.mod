@@ -1,4 +1,4 @@
-module github.com/dominik-da-rocha/go-tool-box
+module github.com/dominik-da-rocha/go-toolbox
 
 go 1.21.5
 

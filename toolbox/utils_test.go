@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/dominik-da-rocha/go-tool-box/toolbox"
+	"github.com/dominik-da-rocha/go-toolbox/toolbox"
 	"github.com/stretchr/testify/assert"
 )
 
