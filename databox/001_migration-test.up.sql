@@ -1,0 +1,7 @@
+CREATE TABLE "fake_entity" (
+  "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+  "text" TEXT NOT NULL,
+  "real" INTEGER NOT NULL,
+  "flag" BOOLEAN NOT NULL,
+  "blob" BLOB
+);

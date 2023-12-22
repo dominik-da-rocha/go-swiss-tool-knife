@@ -2,7 +2,11 @@ module github.com/dominik-da-rocha/go-toolbox
 
 go 1.21.5
 
-require github.com/stretchr/testify v1.8.4
+require (
+	github.com/golang-migrate/migrate v3.5.4+incompatible
+	github.com/mattn/go-sqlite3 v1.14.19
+	github.com/stretchr/testify v1.8.4
+)
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
