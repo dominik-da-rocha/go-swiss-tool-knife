@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-const currentMigVersion = 1
+const currentMigVersion = 2
 
 func newFakeMigration() *migrate.Migrate {
 	db, name := databox.OpenMemoryDb()
@@ -41,7 +41,7 @@ func Test_MigrateUp(t *testing.T) {
 	mig := newFakeMigration()
 	databox.MigrateUp(mig)
 	ver, dirty := databox.GetMigrationVersion(mig)
-	assert.Equal(t, uint(1), ver)
+	assert.Equal(t, uint(currentMigVersion), ver)
 	assert.Equal(t, false, dirty)
 }
 func Test_MigrateDown(t *testing.T) {
@@ -60,6 +60,6 @@ func Test_MigrateTo(t *testing.T) {
 	mig := newFakeMigration()
 	databox.MigrateTo(mig, 1)
 	ver, dirty := databox.GetMigrationVersion(mig)
-	assert.Equal(t, uint(currentMigVersion), ver)
+	assert.Equal(t, uint(1), ver)
 	assert.Equal(t, false, dirty)
 }
