@@ -15,7 +15,7 @@ func init() {
 	MigrateCmd.AddCommand(upCmd)
 	MigrateCmd.AddCommand(toCmd)
 	MigrateCmd.PersistentFlags().StringVar(&FlagDatabasePath, "database", FlagDatabasePath, "path to database")
-	MigrateCmd.PersistentFlags().StringVar(&FlagMigrationPath, "migration", FlagDatabasePath, "path to migration files")
+	MigrateCmd.PersistentFlags().StringVar(&FlagMigrationPath, "migration", FlagMigrationPath, "path to migration files")
 }
 
 // MigrateCmd represents the migrate command
