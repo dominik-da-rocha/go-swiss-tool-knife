@@ -1,9 +1,9 @@
 package toolbox_test
 
 import (
-	"go-tool-box/toolbox"
 	"testing"
 
+	"github.com/dominik-da-rocha/go-tool-box/toolbox"
 	"github.com/stretchr/testify/assert"
 )
 
