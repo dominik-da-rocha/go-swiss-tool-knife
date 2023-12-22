@@ -1,7 +1,7 @@
-package structs_test
+package toolbox_test
 
 import (
-	"go-tool-box/structs"
+	"go-tool-box/toolbox"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -24,7 +24,7 @@ func Test_GetStructNames(t *testing.T) {
 		notTagged: 4,
 	}
 	valPtr := &val
-	names := structs.GetStructTags(valPtr, "my-tag")
+	names := toolbox.GetStructTags(valPtr, "my-tag")
 	assert.Equal(t, 4, len(names))
 	assert.Equal(t, "hello", names[0])
 	assert.Equal(t, "world", names[1])
@@ -35,6 +35,6 @@ func Test_GetStructNames(t *testing.T) {
 func Test_GetStructNamesWithArrayPanics(t *testing.T) {
 	assert.Panics(t, func() {
 		value := []string{}
-		structs.GetStructTags(value, "my-tag")
+		toolbox.GetStructTags(value, "my-tag")
 	})
 }

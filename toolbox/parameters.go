@@ -1,6 +1,4 @@
-package parameters
-
-import "go-tool-box/strings"
+package toolbox
 
 func ToInt64(value *int64, def int64) int64 {
 	if value == nil {
@@ -19,10 +17,10 @@ func ToString(value *string, def string) string {
 }
 
 func ToAnyStringOf(text *string, allowed []string, def string) string {
-	if strings.IsNilOrEmpty(text) {
+	if IsNilOrEmpty(text) {
 		return def
 	}
-	idx := strings.IndexOfString(allowed, *text)
+	idx := IndexOfString(allowed, *text)
 	if idx < 0 {
 		return def
 	}
