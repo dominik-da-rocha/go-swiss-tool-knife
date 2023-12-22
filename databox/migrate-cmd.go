@@ -8,7 +8,7 @@ import (
 )
 
 var FlagDatabasePath string = "app.sqlite"
-var FlagMigrationPath string = "migration"
+var FlagMigrationPath string = "file://migration"
 
 func init() {
 	MigrateCmd.AddCommand(downCmd)
